@@ -19,6 +19,4 @@ class App {
                 return Implementations.right(elements, count);
         }
     }
-
-    
 }
