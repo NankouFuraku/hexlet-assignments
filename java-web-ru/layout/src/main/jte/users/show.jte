@@ -1,5 +1,5 @@
 @import exercise.dto.users.UserPage
-@param UsersPage page
+@param UserPage page
 
 @template.layout.page(
     content = @`
