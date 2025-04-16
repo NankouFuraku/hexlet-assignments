@@ -8,7 +8,7 @@
         <input type="submit" value="Search" />
     </form>
     @for(var user : page.getUsers())
-        <p>${user.getFirstName()}</p>
+        <p>${user.getFirstName()} ${user.getLastName()}</p>
     @endfor
     `
 )
