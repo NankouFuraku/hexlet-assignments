@@ -5,6 +5,8 @@ import java.util.List;
 import exercise.model.User;
 import exercise.dto.users.UsersPage;
 import static io.javalin.rendering.template.TemplateUtil.model;
+import static org.apache.commons.lang3.StringUtils.startsWithIgnoreCase;
+
 import io.javalin.rendering.template.JavalinJte;
 
 import org.apache.commons.lang3.StringUtils;
@@ -28,7 +30,7 @@ public final class App {
 
             if (term != null) {
                 filteredUsers = USERS.stream()
-                        .filter(u -> u.getFirstName().equalsIgnoreCase(term))
+                        .filter(u -> startsWithIgnoreCase(u.getFirstName(), term))
                         .toList();
             } else {
                 filteredUsers = USERS;
